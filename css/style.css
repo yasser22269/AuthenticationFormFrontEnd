@@ -198,9 +198,13 @@ body {
     background-repeat: no-repeat;
     background-position: center right calc(2.25rem / 4);
 }
+.form-control.is-invalid~.invalid-feedback, .form-control.is-invalid~.invalid-tooltip, .was-validated .form-control:invalid~.invalid-feedback, .was-validated .form-control:invalid~.invalid-tooltip {
+    display: block !important;
+}
 .invalid-feedback {
     margin-top: -8px;
     margin-bottom: 10px;
+    text-align: left;
 }
 @media (max-width: 300px) {
     ul li {

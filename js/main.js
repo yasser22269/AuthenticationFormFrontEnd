@@ -10,17 +10,18 @@ $(document).ready(function () {
     function validateUsername() {
         let usernameValue = $("#name").val();
         if (usernameValue.length == "") {
-            $("#usercheck").show();
+            $("#usercheck").css("display", "block");
             usernameError = false;
             return false;
         } else if (usernameValue.length < 3 || usernameValue.length > 30) {
-            $("#usercheck").show();
+            $("#usercheck").css("display", "block");
+
             $("#usercheck").html("**length of username must be between 3 and 10");
             usernameError = false;
             return false;
         } else {
             usernameError = true;
-            $("#usercheck").hide();
+            $("#usercheck").css("display", "none");
         }
     }
 
@@ -92,9 +93,9 @@ $(document).ready(function () {
 
 // submit register button
 $("#submitregister").click(function (e) {
+    validateUsername();
     validatePassword();
     EmailVailid();
-    validateUsername();
     if (
         usernameError == true && passwordError == true && emailError == true
     ) {
