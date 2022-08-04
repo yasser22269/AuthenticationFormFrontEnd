@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/toastr.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -34,13 +36,21 @@
                             <a  href="register.html"><li>Register</li></a>
                         </ul>
                         <div class="info">
-                            <input type="text" class="form-control" name="Email" placeholder="Email">
-                            <input type="password" class="form-control" name="password" placeholder="Password">
+                            <form >
+                                <input type="text" class="form-control"  id="email" name="email" placeholder="Email">
+                                <small id="emailvalid" class="invalid-feedback">
+                                    Your email must be a valid email
+                                </small>
+                                <input type="password" class="form-control"  id="password" name="password" placeholder="Password">
+                                <small id="passcheck" class="invalid-feedback">
+                                    Please Fill the password
+                                </small>
 
-                            <ul class="submited">
-                               <li> <button class="button-info"> Login</button></li>
-                                <a href="#"><span>Forget Password ?</span></a>
-                            </ul>
+                                <ul class="submited">
+                                   <li> <button class="button-info" id="submitlogin" type="submit"> Login</button></li>
+                                    <a href="#"><span>Forget Password ?</span></a>
+                                </ul>
+                            </form>
                             <div class="or">
                                 <span class="orP">OR</span>
                             </div>
@@ -73,6 +83,7 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/toastr.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <!-- -->   <!--  -->  <!-- -->  <!--  -->  <!-- -->  <!--  --> <!-- --> <!--  --> <!-- --><!--  -->
